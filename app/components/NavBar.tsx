@@ -9,7 +9,7 @@ export function NavBar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const linkClass = (href: string) =>
-    `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${pathname === href ? "bg-amber-100 text-amber-800" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+    `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${pathname === href ? "bg-emerald-100 text-emerald-800" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
     }`;
 
   return (
