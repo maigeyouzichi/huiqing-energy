@@ -1,0 +1,35 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+        "typescript.preferences.includePackageJsonAutoImports": "auto",
+        "emmet.includeLanguages": {
+            "typescript": "html",
+            "typescriptreact": "html"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "files.eol": "\n",
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true
+    },
+    "extensions": {
+        "recommendations": [
+            "esbenp.prettier-vscode",
+            "bradlc.vscode-tailwindcss",
+            "ms-vscode.vscode-typescript-next",
+            "formulahendry.auto-rename-tag",
+            "christian-kohler.path-intellisense"
+        ]
+    }
+}
