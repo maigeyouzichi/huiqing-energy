@@ -17,8 +17,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "慧清能源 | 光伏逆变器与组件供应商",
-  description: "慧清能源——专注光伏逆变器与组件的可靠供应商，提供高效、安全、易于运维的光伏产品与解决方案。",
-  icons: { icon: "/favicon.ico" },
+  description: "慧清能源——华为逆变器金牌 + 三钻伙伴。专注光伏逆变器与组件，提供高效、安全、易运维的产品与解决方案。",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32 48x48" },
+    ],
+  },
   keywords: ["光伏", "逆变器", "组件", "太阳能", "分布式光伏", "储能"],
 };
 
@@ -33,10 +38,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-        <main className="min-h-[calc(100vh-200px)]">
+        <main>
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

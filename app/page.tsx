@@ -3,52 +3,49 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="font-sans">
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-10">
-        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
-          高效可靠的光伏逆变器与组件供应商
-        </h1>
-        <p className="mt-4 text-base sm:text-lg text-black/70 max-w-2xl">
-          慧清能源致力于为分布式与地面电站提供高转换效率、稳定耐用、便捷运维的光伏产品解决方案。
-        </p>
-        <div className="mt-6 flex gap-3">
-          <Link href="/products" className="px-4 py-2 rounded-md bg-foreground text-background text-sm sm:text-base font-medium hover:opacity-90">查看产品</Link>
-          <a href="#contact" className="px-4 py-2 rounded-md border border-black/[.12] text-sm sm:text-base hover:bg-black/[.04]">联系我们</a>
-        </div>
-      </section>
+      {/* 全屏 Hero：背景图/视频 + 居中标题/副标题 + 底部三列要点 */}
+      <section className="relative w-full h-screen overflow-hidden" style={{ height: '100vh' }}>
+        {/* 背景视频（如 /public/hero.mp4 存在则展示，否则忽略） */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        {/* 背景图（如 /public/hero.jpg 存在则可见，不存在时仅显示渐变底色） */}
+        <div
+          className="absolute inset-0"
+          style={{ 
+            backgroundImage: "url('/product/product-group.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+            width: "100%",
+            height: "100%",
+            clipPath: "polygon(0 30%, 100% 30%, 100% 100%, 0% 100%)"
+          }}
+        />
+        {/* 渐变遮罩，提升文字对比度 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent" />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid sm:grid-cols-3 gap-6">
-        <div className="p-5 rounded-xl border border-black/[.06]">
-          <div className="text-lg font-semibold">高转换效率</div>
-          <div className="mt-2 text-sm text-black/70">多路 MPPT、优化功率曲线，提升整体发电量。</div>
-        </div>
-        <div className="p-5 rounded-xl border border-black/[.06]">
-          <div className="text-lg font-semibold">稳定与安全</div>
-          <div className="mt-2 text-sm text-black/70">全链路保护与并网认证，适应各类电网环境。</div>
-        </div>
-        <div className="p-5 rounded-xl border border-black/[.06]">
-          <div className="text-lg font-semibold">便捷运维</div>
-          <div className="mt-2 text-sm text-black/70">可视化监控与远程升级，降低运维成本。</div>
-        </div>
-      </section>
-
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <div className="flex items-end justify-between">
-          <h2 className="text-2xl sm:text-3xl font-semibold">热门产品</h2>
-          <Link href="/products" className="text-sm text-black/70 hover:underline">全部产品</Link>
-        </div>
-        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { name: "三相并网逆变器 50kW", desc: "高效并网、低谐波、支持多路 MPPT。" },
-            { name: "户用单相逆变器 5kW", desc: "静音设计，适合家庭屋顶光伏系统。" },
-            { name: "高效单晶组件 550W", desc: "半片多主栅，高双面率与低衰减。" },
-          ].map((p) => (
-            <div key={p.name} className="p-5 rounded-xl border border-black/[.06]">
-              <div className="font-medium">{p.name}</div>
-              <div className="mt-1 text-sm text-black/70">{p.desc}</div>
-              <Link href="/products" className="mt-3 inline-block text-sm text-foreground hover:underline">了解更多</Link>
+        {/* 中央标题区 */}
+        <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 pt-32">
+          <div className="max-w-3xl text-center text-black">
+            <h1 className="text-[30px] sm:text-[44px] leading-[1.15] font-semibold tracking-tight">
+              智能充电网络 / 光伏并网解决方案
+            </h1>
+            <p className="mt-3 text-base sm:text-lg text-black/80">
+              共建高质量、可持续发展的智能能源基础设施
+            </p>
+            <div className="mt-6 flex gap-3 justify-center">
+              <Link href="/solutions" className="px-4 py-2 btn-primary text-sm sm:text-base font-medium">查看方案</Link>
+              <Link href="/products" className="px-4 py-2 btn-outline text-sm sm:text-base text-black border-black/30 hover:bg-black/5">查看产品</Link>
             </div>
-          ))}
+          </div>
         </div>
+
       </section>
     </div>
   );
