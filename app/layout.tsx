@@ -20,8 +20,7 @@ export const metadata: Metadata = {
   description: "慧清能源——华为逆变器金牌 + 三钻伙伴。专注光伏逆变器与组件，提供高效、安全、易运维的产品与解决方案。",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "32x32 48x48" },
+      { url: "/favicon.png", type: "image/png" },
     ],
   },
   keywords: ["光伏", "逆变器", "组件", "太阳能", "分布式光伏", "储能"],
@@ -33,9 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className="overflow-hidden">
+    <html lang="zh-CN">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
         <main>
