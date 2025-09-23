@@ -23,6 +23,7 @@ export function NavBar() {
         <nav className="hidden sm:flex items-center gap-2">
           <Link href="/" className={linkClass("/")}>首页</Link>
           <Link href="/download" className={linkClass("/download")}>资料下载</Link>
+          <Link href="/contact" className={linkClass("/contact")}>联系我们</Link>
           <a
             href="https://app.huawei.com/escpportal/pub/wechat.html?Language=CN&appName=escp&buType=2"
             target="_blank"
@@ -31,7 +32,6 @@ export function NavBar() {
           >
             质保查询
           </a>
-          <Link href="/contact" className={linkClass("/contact")}>联系我们</Link>
         </nav>
         <Image src="/menu.png" className="sm:hidden" alt="菜单" width={30} height={30} priority onClick={() => setOpen((v) => !v)} />
       </div>
@@ -44,6 +44,9 @@ export function NavBar() {
             <Link href="/download" className={linkClass("/download")} onClick={() => setOpen(false)}>资料下载</Link>
           </div>
           <div className="max-w-7xl mx-auto px-2 mt-2 flex flex-col">
+            <Link href="/contact" className={linkClass("/contact")} onClick={() => setOpen(false)}>联系我们</Link>
+          </div>
+          <div className="max-w-7xl mx-auto px-2 mt-2 flex flex-col">
             <a
               href="https://app.huawei.com/escpportal/pub/wechat.html?Language=CN&appName=escp&buType=2"
               target="_blank"
@@ -53,9 +56,6 @@ export function NavBar() {
             >
               质保查询
             </a>
-          </div>
-          <div className="max-w-7xl mx-auto px-2 mt-2 flex flex-col">
-            <Link href="/contact" className={linkClass("/contact")} onClick={() => setOpen(false)}>联系我们</Link>
           </div>
         </div>
       )}
