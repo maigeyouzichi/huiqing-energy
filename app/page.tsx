@@ -3,8 +3,15 @@ export default function Home() {
     <div className="min-h-screen">
       {/* 英雄区域 */}
       <section
-        className="relative h-screen flex items-center justify-center bg-white"
+        className="relative h-screen flex items-center justify-center bg-gradient-to-br from-slate-200 via-slate-100 to-slate-300"
       >
+        {/* 商务装饰背景 */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-200/50 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-slate-300/60 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-emerald-300/40 rounded-full blur-lg"></div>
+          <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-slate-400/30 rounded-full blur-lg"></div>
+        </div>
 
         {/* 内容区域 */}
         <div className="relative z-10 text-center text-slate-800 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
@@ -42,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* 产品特色区域 */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-slate-300 via-slate-200 to-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
@@ -103,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* 产品展示区域 */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100">
+      <section className="py-24 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
@@ -118,7 +125,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* 产品图片 */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
               <img
                 src="/product/product-group.jpeg"
                 alt="光伏产品"
