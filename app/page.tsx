@@ -24,12 +24,12 @@ export default function Home() {
 
           <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-8 py-4 rounded-lg mb-8">
             <p className="text-xl sm:text-2xl font-semibold text-white">
-              华为逆变器金牌 + 三钻合作伙伴
+              华为逆变器 + 爱旭组件
             </p>
           </div>
 
           <p className="text-xl sm:text-2xl mb-12 text-slate-200 max-w-4xl mx-auto leading-relaxed font-light">
-            专注光伏逆变器与组件，提供高效、安全、易运维的产品与解决方案
+            专注华为逆变器与爱旭组件，提供高效、安全、易运维的产品与解决方案
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
@@ -70,7 +70,17 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">华为金牌合作伙伴</h3>
-              <p className="text-slate-600 leading-relaxed text-lg">华为逆变器金牌 + 三钻合作伙伴，获得官方认证</p>
+              <p className="text-slate-600 leading-relaxed text-lg">华为逆变器金牌 + 服务三钻合作伙伴，获得官方认证</p>
+            </div>
+
+            <div className="text-center p-10 bg-gradient-to-br from-slate-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:border-amber-200 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-10 h-10 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">爱旭组件银牌合作伙伴</h3>
+              <p className="text-slate-600 leading-relaxed text-lg">爱旭组件银牌经销商，获得官方认证</p>
             </div>
 
             {/* 专业技术 */}
@@ -133,11 +143,11 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="flex items-start group">
                   <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">华为逆变器产品，高效稳定，性能卓越</p>
+                  <p className="text-slate-600 leading-relaxed text-lg">华为品质，高效稳定，性能卓越</p>
                 </div>
                 <div className="flex items-start group">
                   <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">优质光伏组件，转换效率高，使用寿命长</p>
+                  <p className="text-slate-600 leading-relaxed text-lg">爱旭光伏组件，转换效率高，使用寿命长</p>
                 </div>
                 <div className="flex items-start group">
                   <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
@@ -145,7 +155,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start group">
                   <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">一站式服务，从设计到安装到运维</p>
+                  <p className="text-slate-600 leading-relaxed text-lg">一站式服务，解决方案到售后支持</p>
                 </div>
               </div>
 

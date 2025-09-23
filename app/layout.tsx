@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "慧清能源 | 光伏逆变器与组件供应商",
-  description: "慧清能源——华为逆变器金牌 + 三钻伙伴。专注光伏逆变器与组件，提供高效、安全、易运维的产品与解决方案。",
+  title: "慧清能源 | 华为逆变器 | 爱旭组件",
+  description: "慧清能源——华为逆变器金牌 + 华为服务三钻伙伴。专注华为逆变器，爱旭组件，提供高效、安全、易运维的产品与解决方案。",
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png" },
