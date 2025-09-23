@@ -33,19 +33,45 @@ export function NavBar() {
             质保查询
           </a>
         </nav>
-        <Image src="/menu.png" className="sm:hidden" alt="菜单" width={30} height={30} priority onClick={() => setOpen((v) => !v)} />
+        <button
+          className="sm:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="打开菜单"
+        >
+          <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
       {open && (
-        <div className="sm:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
-            <Link href="/" className={linkClass("/")} onClick={() => setOpen(false)}>首页</Link>
-            <Link href="/download" className={linkClass("/download")} onClick={() => setOpen(false)}>资料下载</Link>
-            <Link href="/contact" className={linkClass("/contact")} onClick={() => setOpen(false)}>联系我们</Link>
+        <div className="sm:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 py-6 space-y-3">
+            <Link
+              href="/"
+              className="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all duration-300"
+              onClick={() => setOpen(false)}
+            >
+              首页
+            </Link>
+            <Link
+              href="/download"
+              className="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all duration-300"
+              onClick={() => setOpen(false)}
+            >
+              资料下载
+            </Link>
+            <Link
+              href="/contact"
+              className="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all duration-300"
+              onClick={() => setOpen(false)}
+            >
+              联系我们
+            </Link>
             <a
               href="https://app.huawei.com/escpportal/pub/wechat.html?Language=CN&appName=escp&buType=2"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all duration-300 block"
+              className="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all duration-300"
               onClick={() => setOpen(false)}
             >
               质保查询
