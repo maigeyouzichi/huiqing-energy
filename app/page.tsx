@@ -1,49 +1,63 @@
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* 英雄区域 */}
-      <section
-        className="relative h-screen flex items-center justify-center bg-gradient-to-br from-slate-200 via-slate-100 to-slate-300"
-      >
-        {/* 商务装饰背景 */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-200/50 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-slate-300/60 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-emerald-300/40 rounded-full blur-lg"></div>
-          <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-slate-400/30 rounded-full blur-lg"></div>
-        </div>
+      {/* 产品展示区域 - 移到最上面 */}
+      <section className="pt-16 pb-24 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* 内容区域 */}
-        <div className="relative z-10 text-center text-slate-800 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-              慧清能源
-            </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 mx-auto mb-8"></div>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* 产品图片 */}
+            <div className="relative group order-2 lg:order-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+              <img
+                src="/product/product-group.jpeg"
+                alt="光伏产品"
+                className="relative w-full h-80 sm:h-96 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
 
-          <div className="inline-block bg-slate-100 backdrop-blur-sm border border-slate-200 px-8 py-4 rounded-lg mb-8">
-            <p className="text-xl sm:text-2xl font-semibold text-slate-800">
-              华为逆变器 + 爱旭组件
-            </p>
-          </div>
+            {/* 产品介绍 - 优化排版 */}
+            <div className="flex flex-col justify-center space-y-8 order-1 lg:order-2">
+              {/* 主标题区域 */}
+              <div className="text-center lg:text-left">
+                <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+                  慧清能源
+                </h3>
+                <div className="w-24 sm:w-28 lg:w-32 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 mx-auto lg:mx-0 mb-8"></div>
+              </div>
 
-          <p className="text-xl sm:text-2xl mb-12 text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
-            专注华为逆变器与爱旭组件，提供高效、安全、易运维的产品与解决方案
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-              href="/download"
-              className="bg-transparent border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 backdrop-blur-sm"
-            >
-              下载资料
-            </a>
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
-            >
-              联系我们
-            </a>
+              {/* 副标题 */}
+              {/* <div className="text-center lg:text-left">
+                <p className="text-2xl sm:text-3xl text-slate-600 leading-relaxed font-light">
+                  专业分布式光伏解决方案专家
+                </p>
+              </div> */}
+
+              {/* 合作伙伴标识 */}
+              <div className="text-center lg:text-left">
+                <div className="inline-block bg-gradient-to-r from-emerald-50 to-slate-50 backdrop-blur-sm border border-emerald-200 px-8 py-4 rounded-xl shadow-sm">
+                  <p className="text-lg sm:text-xl font-semibold text-slate-800">
+                    华为金牌伙伴 · 华为三钻伙伴 · 爱旭银牌代理
+                  </p>
+                </div>
+              </div>
+
+              {/* 按钮区域 */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <a
+                  href="/download"
+                  className="bg-transparent border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 backdrop-blur-sm text-center"
+                >
+                  下载资料
+                </a>
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+                >
+                  联系我们
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -109,60 +123,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 产品展示区域 */}
-      <section className="py-24 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-              核心产品与服务
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 mx-auto mb-8"></div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              提供完整的光伏解决方案
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* 产品图片 */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
-              <img
-                src="/product/product-group.jpeg"
-                alt="光伏产品"
-                className="relative w-full h-80 sm:h-96 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-
-            {/* 产品介绍 */}
-            <div className="flex flex-col justify-center space-y-8">
-              <div>
-                <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">光伏逆变器与组件</h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 mb-8"></div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">华为品质，高效稳定，性能卓越</p>
-                </div>
-                <div className="flex items-start group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">爱旭光伏组件，转换效率高，使用寿命长</p>
-                </div>
-                <div className="flex items-start group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">储能系统解决方案，智能管理，安全可靠</p>
-                </div>
-                <div className="flex items-start group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                  <p className="text-slate-600 leading-relaxed text-lg">一站式服务，解决方案到售后支持</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
 
     </div>
   );

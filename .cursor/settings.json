@@ -1,0 +1,7 @@
+{
+    "rules": [
+        "nextjs-app-router",
+        "tailwind-react",
+        "typescript"
+    ]
+}
