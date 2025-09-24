@@ -1,53 +1,5 @@
 # 慧清能源项目规则
 
-## 技术栈
-- 使用 Next.js 14+ 和 React 18+
-- 使用 TypeScript 进行类型安全开发
-- 使用 Tailwind CSS 进行样式设计
-- 使用 Next.js Image 组件优化图片
-- 使用 Next.js Link 组件进行内部导航
-
-## 代码风格
-- 使用函数式组件和 React Hooks
-- 组件文件使用 PascalCase 命名（如 NavBar.tsx）
-- 页面文件使用小写命名（如 page.tsx）
-- 使用 ESLint 和 Prettier 进行代码格式化
-- 组件内部使用 2 空格缩进
-
-## 样式设计
-- 优先使用 Tailwind CSS 工具类
-- 使用响应式设计（sm:, md:, lg: 前缀）
-- 保持一致的配色方案（slate + emerald 主题）
-- 使用渐变背景增加视觉层次
-- 添加悬停效果和过渡动画
-
-## 组件结构
-- 每个页面组件导出为 default export
-- 使用 "use client" 指令标记客户端组件
-- 组件文件放在 app/components/ 目录
-- 页面文件放在对应的 app/ 目录下
-- API 路由放在 app/api/ 目录
-
-## 内容管理
-- 使用中文作为主要语言
-- 保持商务化和专业的语调
-- 突出华为合作伙伴身份
-- 强调绿色能源和环保理念
-
-## 性能优化
-- 使用 Next.js Image 组件优化图片加载
-- 实现代码分割和懒加载
-- 优化移动端体验
-- 使用适当的缓存策略
-
-## 可访问性
-- 添加适当的 aria-label
-- 确保键盘导航支持
-- 保持足够的颜色对比度
-- 使用语义化的 HTML 标签
-
-## 特定要求
-- 保持绿色主题配色（emerald 系列）
-- 使用商务化的设计风格
-- 确保移动端和桌面端都有良好体验
-- 所有外部链接使用 target="_blank" 和 rel="noopener noreferrer"
+- nextjs-app-router
+- tailwind-react
+- typescript
